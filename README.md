@@ -4,12 +4,23 @@
 
 We provide **ready-to-use files** for Windows and macOS:
 
+### Windows
+
 1. Go to the [Releases page](https://github.com/Hatim-Scott/XML-Modifier/releases)  
-2. Download the latest `.exe` file (Windows executable) **OR** Download the latest `.app` file (macOS executable)
+2. Download the latest `.exe` file
 3. Open the app — no need to install Python or any dependencies  
 
-> ⚠️ macOS may warn that the app is from an unidentified developer.  
-> Right-click → Open → Confirm to launch.
+> ⚠️ Windows may warn that the app is from an unidentified developer
+> Click on **more options** → A new **Run Anyway** button should appear
+
+### MacOS
+
+1. Go to the [Releases page](https://github.com/Hatim-Scott/XML-Modifier/releases)  
+2. Download the latest `.app` file
+3. Open the app — no need to install Python or any dependencies  
+
+> ⚠️ MacOS may warn that the app is from an unidentified developer
+> To see how to open go to [this page](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)
 
 ---
 
