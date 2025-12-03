@@ -6,7 +6,9 @@ from lxml import etree as ET
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-SETTINGS_FILE = os.path.join(os.path.expanduser("~"), ".xml_modifier_settings.json")
+#Uncomment for your OS
+#WINDOWS           SETTINGS_FILE = os.path.join(os.path.expanduser("~"), ".xml_modifier_settings.json")
+#MACOS             SETTINGS_FILE = "settings.json"
 
 default_settings = {
     "tag": "EndToEndId",
