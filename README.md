@@ -16,8 +16,9 @@ We provide **ready-to-use files** for Windows and macOS:
 ### MacOS
 
 1. Go to the [Releases page](https://github.com/Hatim-Scott/XML-Modifier/releases)  
-2. Download the latest `.app` file
-3. Open the app — no need to install Python or any dependencies  
+2. Download the latest `.zip` file
+3. Extract the contents of the file
+4. Open the app — no need to install Python or any dependencies  
 
 > ⚠️ MacOS may warn that the app is from an unidentified developer
 > To see how to open go to [this page](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)
@@ -42,4 +43,5 @@ We provide **ready-to-use files** for Windows and macOS:
 ## Notes
 
 - Backups are stored in a subfolder named `/backup` inside your selected folder.  
-- Only `.xml` files in the selected folder are processed (subfolders are ignored).  
+- Only `.xml` files in the selected folder are processed (subfolders are ignored).
+- Settings file is generated at root user directory for Windows and at app directory for macOS
