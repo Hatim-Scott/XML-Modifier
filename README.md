@@ -11,7 +11,7 @@ We provide **ready-to-use files** for Windows and macOS:
 3. Open the app — no need to install Python or any dependencies  
 
 > ⚠️ Windows may warn that the app is from an unidentified developer
-> Click on **more options** → A new **Run Anyway** button should appear
+> Click on **more options** → **Run Anyway**
 
 ### MacOS
 
@@ -21,7 +21,7 @@ We provide **ready-to-use files** for Windows and macOS:
 4. Open the app — no need to install Python or any dependencies  
 
 > ⚠️ MacOS may warn that the app is from an unidentified developer
-> To see how to open go to [this page](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)
+> To see how to open, go to [this page](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)
 
 ---
 
