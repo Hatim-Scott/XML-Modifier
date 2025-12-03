@@ -6,7 +6,7 @@ from lxml import etree as ET
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-SETTINGS_FILE = "settings.json"
+SETTINGS_FILE = os.path.join(os.path.expanduser("~"), ".xml_modifier_settings.json")
 
 default_settings = {
     "tag": "EndToEndId",
@@ -120,13 +120,21 @@ def browse_folder():
 
 
 def run():
-    settings["tag"] = tag_entry.get().strip()
-    settings["old_prefix"] = old_entry.get().strip()
-    settings["new_prefix"] = new_entry.get().strip()
-    settings["folder"] = folder_entry.get().strip()
+    try:
+        settings["tag"] = tag_entry.get().strip()
+        settings["old_prefix"] = old_entry.get().strip()
+        settings["new_prefix"] = new_entry.get().strip()
+        settings["folder"] = folder_entry.get().strip()
 
-    save_settings()
-    process_files()
+        save_settings()
+        process_files()
+    except Exception as e:
+        import traceback
+        print("Error:", e)
+        traceback.print_exc()
+        messagebox.showerror("Error", f"An error occurred:\n{e}")
+
+
 
 
 
