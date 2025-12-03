@@ -5,8 +5,7 @@
 We provide **ready-to-use files** for Windows and macOS:
 
 1. Go to the [Releases page](https://github.com/Hatim-Scott/XML-Modifier/releases)  
-2.1 Download the latest `.exe` file (Windows executable)
-2.2 Download the latest `.app` file (macOS executable)
+2. Download the latest `.exe` file (Windows executable) **OR** Download the latest `.app` file (macOS executable)
 3. Open the app — no need to install Python or any dependencies  
 
 > ⚠️ macOS may warn that the app is from an unidentified developer.  
