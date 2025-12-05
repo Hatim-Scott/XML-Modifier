@@ -5,15 +5,22 @@ import shutil
 from lxml import etree as ET
 import tkinter as tk
 from tkinter import filedialog, messagebox
+import platform
+from pathlib import Path
 
-#Uncomment for your OS
-#WINDOWS           SETTINGS_FILE = os.path.join(os.path.expanduser("~"), ".xml_modifier_settings.json")
-#MACOS             SETTINGS_FILE = "settings.json"
+APP_NAME = "XMLModify"
+
+if platform.system() == "Darwin":
+    settings_dir = Path.home() / "Library" / "Application Support" / APP_NAME
+elif platform.system() == "Windows":
+    settings_dir = Path(os.getenv("APPDATA")) / APP_NAME
+else:  
+    settings_dir = Path.home() / f".{APP_NAME.lower()}"
+
+settings_dir.mkdir(parents=True, exist_ok=True)
+SETTINGS_FILE = settings_dir / "settings.json"
 
 default_settings = {
-    "tag": "EndToEndId",
-    "old_prefix": "",
-    "new_prefix": "",
     "folder": ""
 }
 
@@ -33,9 +40,9 @@ def save_settings():
 
 
 def process_files():
-    tag = settings["tag"]
-    old_p = settings["old_prefix"]
-    new_p = settings["new_prefix"]
+    tag = "EndToEndId"
+    old_p = "1D097"
+    new_p = "1D101"
     folder = settings["folder"]
 
     if not all([tag, old_p, new_p, folder]):
@@ -123,9 +130,6 @@ def browse_folder():
 
 def run():
     try:
-        settings["tag"] = tag_entry.get().strip()
-        settings["old_prefix"] = old_entry.get().strip()
-        settings["new_prefix"] = new_entry.get().strip()
         settings["folder"] = folder_entry.get().strip()
 
         save_settings()
@@ -145,21 +149,6 @@ app = tk.Tk()
 app.title("XML Modifier")
 
 pad = {'padx': 10, 'pady': 5}
-
-tk.Label(app, text="Tag Name (default = EndToEndId)").pack(**pad)
-tag_entry = tk.Entry(app, width=40)
-tag_entry.pack()
-tag_entry.insert(0, settings["tag"])
-
-tk.Label(app, text="Old Prefix to Detect").pack(**pad)
-old_entry = tk.Entry(app, width=40)
-old_entry.pack()
-old_entry.insert(0, settings["old_prefix"])
-
-tk.Label(app, text="Replace With").pack(**pad)
-new_entry = tk.Entry(app, width=40)
-new_entry.pack()
-new_entry.insert(0, settings["new_prefix"])
 
 tk.Label(app, text="Folder Containing XML Files").pack(**pad)
 folder_entry = tk.Entry(app, width=40)
