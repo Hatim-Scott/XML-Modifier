@@ -44,4 +44,3 @@ We provide **ready-to-use files** for Windows and macOS:
 
 - Backups are stored in a subfolder named `/backup` inside your selected folder.  
 - Only `.xml` files in the selected folder are processed (subfolders are ignored).
-- Settings file is generated at root user directory for Windows and at app directory for macOS
